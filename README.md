@@ -18,6 +18,11 @@ A responsive hospital website built and deployed for a real hospital to provide 
 - JavaScript
 - (Add framework if you used any)
 
+## 📸 Screenshots
+![Home](screenshots/home.png)
+![Services](screenshots/services.png)
+![Contact](screenshots/contact.png)
+
 ## 📌 Purpose
 This project was built to help a hospital establish an online presence and make patient information easily accessible.
 
