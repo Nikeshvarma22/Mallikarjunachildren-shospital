@@ -1,0 +1,79 @@
+/* Performance Optimized CSS - Only speed improvements, no UI changes */
+
+/* Optimize font loading */
+@font-face {
+    font-family: 'Poppins';
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
+}
+
+/* Optimize image loading */
+img {
+    max-width: 100%;
+    height: auto;
+    loading: lazy;
+}
+
+/* Optimize video loading */
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Optimize animations for better performance */
+* {
+    will-change: auto;
+}
+
+/* Optimize transitions */
+.btn-primary, .btn-secondary, .nav-cta, .service-card, .testimonial-card, .doctor-card {
+    will-change: transform;
+}
+
+/* Optimize scroll performance */
+.testimonials-scroll {
+    will-change: scroll-position;
+}
+
+/* Optimize parallax performance */
+.parallax-bg {
+    will-change: transform;
+}
+
+/* Optimize hover effects */
+.service-card:hover, .testimonial-card:hover, .doctor-card:hover {
+    will-change: transform;
+}
+
+/* Optimize image loading states */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Optimize critical rendering path */
+.hero {
+    contain: layout style paint;
+}
+
+.navbar {
+    contain: layout style paint;
+}
+
+/* Optimize repaints */
+.ripple {
+    will-change: transform, opacity;
+}
+
+/* Optimize scroll indicators */
+.progress-bar, .back-to-top {
+    will-change: transform, opacity;
+}

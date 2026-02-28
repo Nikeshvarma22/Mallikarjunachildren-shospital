@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Test - Mallikarjuna Children Hospital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #3BAFDA;
+            border-radius: 8px;
+            background: #EAF8F9;
+        }
+        .test-title {
+            color: #0F3557;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .test-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .test-button {
+            background: #C6D300;
+            color: #333;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px;
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .test-button:hover {
+            background: #B8C200;
+            transform: translateY(-2px);
+        }
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .test-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .test-image {
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(45deg, #3BAFDA, #C6D300);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .media-query-info {
+            background: #F5F9A8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .test-container {
+                margin: 10px;
+                padding: 15px;
+            }
+            .test-title {
+                font-size: 1.3rem;
+            }
+            .responsive-grid {
+                grid-template-columns: 1fr;
+            }
+            .test-button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+        @media (max-width: 480px) {
+            .test-container {
+                margin: 5px;
+                padding: 10px;
+            }
+            .test-title {
+                font-size: 1.2rem;
+            }
+            .test-section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 style="color: #0F3557; text-align: center; margin-bottom: 30px;">
+            🏥 Responsive Design Test
+        </h1>
+        
+        <div class="test-section">
+            <h2 class="test-title">📱 Mobile Navigation Test</h2>
+            <p class="test-description">
+                Test the hamburger menu and mobile navigation. The menu should stack vertically on smaller screens.
+            </p>
+            <a href="index.html" class="test-button">Test Navigation</a>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">🖼️ Responsive Images Test</h2>
+            <p class="test-description">
+                All images should scale properly and maintain aspect ratio on all screen sizes.
+            </p>
+            <div class="responsive-grid">
+                <div class="test-card">
+                    <div class="test-image">Logo</div>
+                    <p>Logo Image</p>
+                </div>
+                <div class="test-card">
+                    <div class="test-image">Doctor</div>
+                    <p>Doctor Image</p>
+                </div>
+                <div class="test-card">
+                    <div class="test-image">Family</div>
+                    <p>Family Image</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">📐 Grid Layout Test</h2>
+            <p class="test-description">
+                Grid layouts should adapt from multiple columns on desktop to single column on mobile.
+            </p>
+            <div class="responsive-grid">
+                <div class="test-card">Service 1</div>
+                <div class="test-card">Service 2</div>
+                <div class="test-card">Service 3</div>
+                <div class="test-card">Service 4</div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">👆 Touch-Friendly Buttons Test</h2>
+            <p class="test-description">
+                All buttons should be at least 44px tall for easy touch interaction on mobile devices.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <button class="test-button">Primary Button</button>
+                <button class="test-button">Secondary Button</button>
+                <button class="test-button">Call Button</button>
+                <button class="test-button">WhatsApp</button>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">📏 Media Query Breakpoints</h2>
+            <p class="test-description">
+                The website uses these responsive breakpoints:
+            </p>
+            <div class="media-query-info">
+                • Desktop: 1200px and above<br>
+                • Tablet: 768px - 1199px<br>
+                • Mobile: 480px - 767px<br>
+                • Small Mobile: 360px - 479px<br>
+                • Extra Small: Below 360px
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">🎯 Test Instructions</h2>
+            <p class="test-description">
+                1. Open the main website (index.html)<br>
+                2. Resize your browser window or use device emulation<br>
+                3. Test on actual mobile devices if possible<br>
+                4. Verify all sections adapt properly<br>
+                5. Check that text is readable and buttons are touch-friendly
+            </p>
+            <a href="index.html" class="test-button" style="background: #3BAFDA; color: white;">
+                Open Main Website
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Display current screen size
+        function updateScreenSize() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const deviceType = width >= 1200 ? 'Desktop' : 
+                             width >= 768 ? 'Tablet' : 
+                             width >= 480 ? 'Mobile' : 'Small Mobile';
+            
+            console.log(`Screen: ${width}x${height} (${deviceType})`);
+        }
+        
+        updateScreenSize();
+        window.addEventListener('resize', updateScreenSize);
+    </script>
+</body>
+</html>

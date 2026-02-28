@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-image { margin: 20px 0; border: 2px solid red; }
+        .test-image img { max-width: 300px; height: auto; }
+    </style>
+</head>
+<body>
+    <h1>Image Test</h1>
+    
+    <div class="test-image">
+        <h3>Logo Test:</h3>
+        <img src="images/logo.png" alt="Logo Test" onerror="this.parentNode.innerHTML+='<p style=color:red>FAILED TO LOAD: images/logo.png</p>'" onload="this.parentNode.innerHTML+='<p style=color:green>SUCCESS: images/logo.png loaded</p>'">
+    </div>
+    
+    <div class="test-image">
+        <h3>Doctor Image Test:</h3>
+        <img src="images/dr-gopathi.png" alt="Doctor Test" onerror="this.parentNode.innerHTML+='<p style=color:red>FAILED TO LOAD: images/dr-gopathi.png</p>'" onload="this.parentNode.innerHTML+='<p style=color:green>SUCCESS: images/dr-gopathi.png loaded</p>'">
+    </div>
+    
+    <div class="test-image">
+        <h3>Hero Background Test:</h3>
+        <img src="images/heroic background.jpg.jpg" alt="Hero Test" onerror="this.parentNode.innerHTML+='<p style=color:red>FAILED TO LOAD: images/heroic background.jpg.jpg</p>'" onload="this.parentNode.innerHTML+='<p style=color:green>SUCCESS: images/heroic background.jpg.jpg loaded</p>'">
+    </div>
+    
+    <div class="test-image">
+        <h3>Original Logo Test:</h3>
+        <img src="images/logo.jpg.png" alt="Original Logo Test" onerror="this.parentNode.innerHTML+='<p style=color:red>FAILED TO LOAD: images/logo.jpg.png</p>'" onload="this.parentNode.innerHTML+='<p style=color:green>SUCCESS: images/logo.jpg.png loaded</p>'">
+    </div>
+    
+    <div class="test-image">
+        <h3>Original Doctor Test:</h3>
+        <img src="images/dr-gopathi.jpg.png" alt="Original Doctor Test" onerror="this.parentNode.innerHTML+='<p style=color:red>FAILED TO LOAD: images/dr-gopathi.jpg.png</p>'" onload="this.parentNode.innerHTML+='<p style=color:green>SUCCESS: images/dr-gopathi.jpg.png loaded</p>'">
+    </div>
+</body>
+</html>
